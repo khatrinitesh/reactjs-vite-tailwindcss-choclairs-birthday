@@ -1,0 +1,718 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "plutobold";
+  src: url("./assets/fonts/plutobold.eot");
+  src: url("./assets/fonts/plutobold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/plutobold.woff2") format("woff2"),
+    url("./assets/fonts/plutobold.woff") format("woff"),
+    url("./assets/fonts/plutobold.ttf") format("truetype"),
+    url("./assets/fonts/plutobold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "plutolight";
+  src: url("./assets/fonts/plutolight.eot");
+  src: url("./assets/fonts/plutolight.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/plutolight.woff2") format("woff2"),
+    url("./assets/fonts/plutolight.woff") format("woff"),
+    url("./assets/fonts/plutolight.ttf") format("truetype"),
+    url("./assets/fonts/plutolight.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "plutomedium";
+  src: url("./assets/fonts/plutomedium.eot");
+  src: url("./assets/fonts/plutomedium.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/plutomedium.woff2") format("woff2"),
+    url("./assets/fonts/plutomedium.woff") format("woff"),
+    url("./assets/fonts/plutomedium.ttf") format("truetype"),
+    url("./assets/fonts/plutomedium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "poppinsmedium";
+  src: url("./assets/fonts/poppinsmedium.eot");
+  src: url("./assets/fonts/poppinsmedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/poppinsmedium.woff2") format("woff2"),
+    url("./assets/fonts/poppinsmedium.woff") format("woff"),
+    url("./assets/fonts/poppinsmedium.ttf") format("truetype"),
+    url("./assets/fonts/poppinsmedium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "riftsoftbold";
+  src: url("./assets/fonts/riftsoftbold.eot");
+  src: url("./assets/fonts/riftsoftbold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/riftsoftbold.woff2") format("woff2"),
+    url("./assets/fonts/riftsoftbold.woff") format("woff"),
+    url("./assets/fonts/riftsoftbold.ttf") format("truetype"),
+    url("./assets/fonts/riftsoftbold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fieldGroup .fieldControl::-webkit-input-placeholder,
+.listOtp li .fieldControlOtp::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--whitecolor) !important;
+}
+.fieldGroup .fieldControl::-moz-placeholder,
+.listOtp li .fieldControlOtp::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--whitecolor) !important;
+}
+.fieldGroup .fieldControl:-ms-input-placeholder,
+.listOtp li .fieldControlOtp::-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--whitecolor) !important;
+}
+.fieldGroup .fieldControl:-moz-placeholder,
+.listOtp li .fieldControlOtp::-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--whitecolor) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: initial !important;
+}
+
+:root {
+  --blackcolor: #000;
+  --whitecolor: #fff;
+  --primarycolor: #36207d;
+  --secondarycolor: #d52880;
+  --tertiarycolor: #c08617;
+  --lightpurplecolor: #ce9eff;
+  --greycolor: #999999;
+
+  /* FONT NAME */
+  --ff_appetite: "appetite"; /*font 1*/
+  --ff_plutobold: "plutobold"; /*font 2*/
+  --ff_plutocondbold: "plutocondbold"; /*font 3*/
+  --ff_plutocondlight: "plutocondlight"; /*font 4*/
+  --ff_plutolight: "plutolight"; /*font 5*/
+  --ff_plutomedium: "plutomedium"; /*font 6*/
+  --ff_poppinsmedium: "poppinsmedium"; /*font 7*/
+  --ff_riftsoftbold: "riftsoftbold"; /*font 8*/
+  --ff_simplesummer: "simplesummer"; /*font 9*/
+  --ff_sundaygrapes: "sundaygrapes"; /*font 10*/
+}
+
+/*--------------------- START COMMON CODING FOR MOBILE AND LANDSCAPE ---------------------*/
+/* START BALLOON */
+.balloonStripe {
+  max-width: 140px;
+  width: 100%;
+}
+.balloonPurple {
+  max-width: 20px;
+  width: 100%;
+}
+.balloonDot {
+  max-width: 70px;
+  width: 100%;
+}
+.confeti {
+  max-width: 10px;
+  width: 100%;
+}
+.festoon {
+  max-width: 25px;
+  width: 100%;
+}
+.starBotRig {
+  max-width: 18px;
+  width: 100%;
+}
+.animate-bounce {
+  animation: bounce 3s infinite;
+}
+.balloonAnimation .balloonStripe {
+  max-width: 250px;
+}
+
+.balloonAnimation .balloonDot {
+  max-width: 150px;
+}
+.balloonAnimation .starBotRig {
+  max-width: 30px;
+}
+
+.balloonAnimation .balloonPurple {
+  max-width: 40px;
+}
+
+.balloonAnimation .festoon {
+  max-width: 50px;
+}
+/* END BALLOON */
+
+/*--------------------- END COMMON CODING FOR MOBILE AND LANDSCAPE ---------------------*/
+
+/*-------------- FONT FAMILY -------------------*/
+:is(
+    .btnPrimary,
+    .btnOutline,
+    .friendListBlock .listFriends li .btnFriends,
+    .terms_condition_page .tc_content .bigheadtitle,
+    .terms_condition_page .tc_content .tc_inner .panel_content .headtitle,
+    .btnFriends
+  ) {
+  font-family: var(--ff_riftsoftbold);
+}
+:is(
+    .registerContent .txtDesc,
+    .linkUrl,
+    .list_checkbox .field_chk .txt_chk,
+    .fieldGroup .fieldControl,
+    .fieldGroup .fieldSelect,
+    .shareAvatarContent .desc,
+    .cameraBlock .webCameraBlock .overlayCamera .txtFrame,
+    .loading-animation .txtLoading,
+    .sidebar .listNav li a,
+    .sidebar .txtApply,
+    .oopsBlock .scanBlock .desc,
+    .terms_condition_page .tc_content .tc_inner .desc,
+    .terms_condition_page .tc_content .tc_inner .txt_short,
+    .terms_condition_page .tc_content .tc_inner .txt_bullet,
+    .fullScreenOverlayHTP .textPlay
+  ) {
+  font-family: var(--ff_plutolight);
+}
+:is(
+    .registerContent .linkurl,
+    .shareAvatarContent .txtWin,
+    .cameraBlock .listTimeline li .linkNum,
+    .dashboardBlock .boxDashB .listDashboard li .innerBox .txtValue,
+    .dashboardBlock .boxDashB .headName,
+    .dashboardBlock .boxDashB .listDashboard li .subTitle,
+    .friendListBlock .sectionTitle .headTitle,
+    .headTitle
+  ) {
+  font-family: var(--ff_plutomedium);
+}
+
+:is(
+    .listOtp li .fieldControlOtp,
+    .sectionTitle .headTitle,
+    .sectionTitle .bigHeadTitle,
+    .sidebar .listNav li a.active:active,
+    .sidebar .listNav li a.active,
+    .oopsBlock .oopsSectionTitle .oopsHeadTitle,
+    .oopsBlock .scanBlock .txtHead,
+    .oopsBlock .oopsSectionTitle .desc
+  ) {
+  font-family: var(--ff_plutobold);
+}
+
+.tc_inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* ONLY FOR MOBILE - PORTRAIT VIEW */
+
+/* START SIDEBAR */
+.overlaySidebar {
+  background: var(--primarycolor) url("./assets/img/bgGradient.png") no-repeat
+    center/cover;
+  transform: translateY(-100%);
+  transition: 0.5s ease all;
+  -webkit-transition: transform 0.5s ease all;
+  -moz-transition: transform 0.5s ease all;
+  -ms-transition: transform 0.5s ease all;
+}
+.overlaySidebar.overlaySidebarOpen {
+  transform: translateY(0%);
+}
+
+.sidebar .listNav li:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+.sidebar .listNav li a {
+  font-size: 1.9501625135427951vh;
+  color: var(--whitecolor);
+}
+
+.sidebar .listNav li a.active {
+  color: var(--secondarycolor);
+}
+/* END SIDEBAR */
+
+body {
+  background: var(--primarycolor) url("./assets/img/bgGradient.png") no-repeat
+    center/cover;
+  font-family: var(--ff_poppinsmedium);
+  font-size: 1.733477789815818vh;
+  height: 100dvh;
+  height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.purpleBackgroundColor {
+  background: var(--primarycolor) url("./assets/img/bgGradient.png") no-repeat
+    center/cover;
+}
+
+.list_checkbox .field_chk .field_input_chk:checked ~ .dot_chk {
+  background-color: var(--secondarycolor);
+  border-color: var(--secondarycolor);
+}
+
+.list_checkbox .field_chk .field_input_chk ~ .dot_chk:after {
+  content: "";
+  display: inline-block;
+  transform: rotate(50deg);
+  height: 15px;
+  width: 6px;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  transition: all 0.3s linear;
+  position: relative;
+  top: -2px;
+  right: 0;
+  z-index: 9;
+}
+
+.list_checkbox .field_chk .field_input_chk:checked ~ .dot_chk:after {
+  border-color: var(--whitecolor);
+}
+
+.fieldGroup:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.fullScreenOverlayHTP,
+.fullScreenOverlayOtp {
+  background: var(--primarycolor) url("./assets/img/bgGradient.png") no-repeat
+    center/cover;
+}
+
+/* START CAMERA BLOCK */
+.cameraBlock .listTimeline li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  border-top: 1px dashed var(--lightpurplecolor);
+  width: 75%;
+}
+.cameraBlock .webCameraBlock video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  object-fit: cover;
+}
+/* END CAMERA BLOCK */
+
+/* START DASHBOARD PAGE */
+.dashboardBlock .boxDashB .listDashboard li:not(:nth-child(3n + 3)) {
+  border-right: 1px solid var(--lightpurplecolor);
+}
+
+.dashboardBlock .boxDashB .listDashboard li:not(:nth-child(1n + 4)) .innerBox {
+  border-bottom: 1px solid var(--lightpurplecolor);
+  padding: 0 0 8px;
+}
+
+.dashboardBlock .boxDashB .listDashboard li {
+  width: calc(100% / 3);
+  padding: 10px;
+}
+/* END DASHBOARD PAGE */
+
+/* START FRIEND LIST PAGE */
+.friendListBlock .btnPrimary {
+  padding: 30px 40px;
+  letter-spacing: 1px;
+}
+
+.friendListBlock .listFriends li:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+/* END FRIEND LIST PAGE */
+
+/* START LOADING */
+.loader {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+#svg-path-loader-1,
+svg rect {
+  fill: var(--lightpurplecolor);
+}
+.loading-animation {
+  background: var(--primarycolor) url(/src/assets/img/bgGradient.png) no-repeat
+    center/cover;
+}
+
+/* END LOADING */
+
+/* START WELCOME PAGE */
+.welcomeFoot .headTitleBlock .bigHeadTitle {
+  line-height: 24px;
+}
+/* END WELCOME PAGE */
+
+/* START OOPS PAGE FOR DESKTOP*/
+.oopsBlock:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -13%;
+  width: 100%;
+  height: 100%;
+  background: url("/src/assets/img/cartoon1.jpg") no-repeat center/cover;
+}
+/* END OOPS PAGE FOR DESKTOP */
+
+/* END COMMON CODE */
+
+@media all and (max-width: 399px) and (orientation: portrait) {
+  /* START FRIENDSLIST PAGE */
+  .friendListBlock .btnPrimary {
+    padding: 10px 30px;
+  }
+  .friendListBlock .listFriends li .btnFriends {
+    padding: 10px;
+  }
+  /* END FRIENDSLIST PAGE */
+}
+
+@media all and (max-width: 376px) and (orientation: portrait) {
+  /* START SHARE AVATAR PAGE */
+  .shareAvatarContent .sectionTitle .bigHeadTitle {
+    font-size: 2.966956vh;
+  }
+  /* END SHARE AVATAR PAGE */
+
+  /* START CREATE AVATAR PAGE */
+  .slideShowCarousel
+    .react-multi-carousel-track
+    .react-multi-carousel-item
+    .itemAvatar {
+    width: 70px;
+    height: 70px;
+  }
+  .LayoutBlock {
+    height: calc(100vh - 400px);
+  }
+  /* END CREATE AVATAR PAGE */
+  /* START WELCOME PAGE */
+  .welcomeFoot .headTitleBlock .bigHeadTitle {
+    line-height: 15px;
+  }
+  /* END WELCOME PAGE */
+}
+
+/* ONLY FOR MOBILE - LANDSCAPE VIEW */
+
+.portraitView {
+  display: none;
+}
+/* START SIDEBAR */
+.overlaySidebarL {
+  background: url("../src/assets/img/bgsidebarlandscape.png") no-repeat
+    center/cover;
+  box-shadow: -18px 23px 22px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -18px 23px 22px 0px rgba(0, 0, 0, 0.1);
+  right: -100%;
+  transition: right 0.5s ease-in-out;
+  -webkit-transition: right 0.5s ease-in-out;
+}
+.overlaySidebarL.overlaySidebarOpenL {
+  right: 0;
+}
+
+.sidebar .listNav li:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+.sidebar .listNav li a {
+  font-size: 1.9501625135427951vh;
+  color: var(--whitecolor);
+}
+
+.sidebar .listNav li a.active {
+  color: var(--secondarycolor);
+  font-family: var(--ff_plutocondbold);
+}
+/* END SIDEBAR */
+
+/* ======================== TOAST MESSAGE STYLES ==============================*/
+.toast_container_for_welcome_message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+.toast_message {
+  background-color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  /* Apply both sets of keyframes for top-to-bottom and bottom-to-top animation */
+  animation: fadeInTop 0.3s ease-in-out forwards,
+    fadeOutTop 0.3s ease-in-out 4s forwards;
+  transform: translateY(100%);
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutTop {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.createAvatar {
+  height: calc(100vh - 400px);
+}
+
+.createavatar {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.avatarGrid {
+  display: grid;
+  grid-template-rows: 15% 40% 45%;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker-popper {
+  z-index: 100;
+}
+.mainContent {
+  height: calc(100dvh - 145px);
+  overflow: auto;
+}
+
+/* face interaction animation */
+
+.headWobble {
+  animation: headWobble 0.1s linear;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+@keyframes headWobble {
+  0% {
+    transform: translateX(-1px);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
+}
+
+.cakeAnimation {
+  rotate: 5deg;
+}
+
+/* START STYLING >> DATEPICKER */
+.MuiInputBase-root {
+  border: 1px solid #ce9eff;
+  border-radius: 10px;
+  height: 45px;
+  overflow: hidden !important;
+  padding: 0 !important;
+  outline: none !important;
+  color: #fff !important;
+  font-family: "plutolight";
+  font-size: 1.5167930660888407vh !important;
+  box-shadow: initial !important;
+  outline: none !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.MuiFormControl-root {
+  width: 100% !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  outline: none !important;
+}
+
+.MuiInputBase-root input {
+  padding: 0 !important;
+  color: var(--whitecolor) !important;
+  font-size: 1.5167930660888407vh !important;
+  padding: 14px !important;
+  border: 0px !important;
+}
+
+.MuiInputBase-root input::placeholder {
+  color: #f5f3f9 !important;
+}
+
+/* END STYLING >> DATEPICKER */
+
+.dashboardHeader {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+}
+
+.animatedModal {
+  animation: slideInFromTop 0.2s ease forwards;
+}
+
+.modalHidden {
+  animation: slideOutToBottom 0.2s ease forwards;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutToBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.listRadio li:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.listRadio li {
+  border: 1px solid var(--lightpurplecolor);
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  padding: 10px;
+}
+
+/* Styles for unchecked state */
+.listRadio li label .dotUnCheck {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 5px;
+  border: 1px solid var(--lightpurplecolor);
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  position: relative;
+}
+
+/* Styles for checked state */
+.listRadio li label .dotCheck {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 5px;
+  border: 1px solid var(--lightpurplecolor);
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 5px;
+  position: relative;
+  /* Specific styles for the checked state */
+  background-color: var(--lightpurplecolor);
+}
+
+.listRadio li .fieldLbl .txtDesc {
+  color: var(--whitecolor);
+  font-family: var(--ff_plutolight);
+  font-size: 12px;
+  max-width: 80%;
+  text-align: left;
+}
+
+.txtDescription {
+  font-family: var(--ff_plutolight);
+}
+
+.fullScreenOverlayHTP .listBullet li:not(:last-child) {
+  margin: 0 0 15px;
+}
+#root {
+  height: 100%;
+}
+
+.blob.purple {
+  box-shadow: 0 0 0 0 rgba(142, 68, 173, 1);
+  animation: pulse-purple 2s infinite;
+}
+
+@keyframes pulse-purple {
+  0% {
+    box-shadow: 0 0 0 0 #d12b7e50;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px #d12b7e75;
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 #d12b7e50;
+  }
+}
+
+.screenrecording_modal_subtext {
+  font-family: var(--ff_plutolight);
+}

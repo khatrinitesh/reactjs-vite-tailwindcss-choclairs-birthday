@@ -1,0 +1,42 @@
+import React from "react";
+
+const Loading = () => {
+  return (
+    <div className="loading-animation fixed inset-[0] w-full h-full flex items-center justify-center flex-col z-[9999]">
+      <svg
+        version="1.1"
+        id="loader-1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="40px"
+        height="40px"
+        viewBox="0 0 50 50"
+        className="enable-background:new 0 0 50 50;"
+        xmlSpace="preserve"
+      >
+        <path
+          fill="#000"
+          d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z"
+          id="svg-path-loader-1"
+        >
+          <animateTransform
+            attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 25 25"
+            to="360 25 25"
+            dur="0.6s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
+      <span className="txtLoading my-[10px] block text-white">
+        Burst of fun loading
+      </span>
+    </div>
+  );
+};
+
+export default Loading;

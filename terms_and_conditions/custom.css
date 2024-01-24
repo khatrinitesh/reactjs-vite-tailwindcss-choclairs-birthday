@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "plutobold";
+  src: url("./fonts/plutobold.eot");
+  src: url("./fonts/plutobold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/plutobold.woff2") format("woff2"),
+    url("./fonts/plutobold.woff") format("woff"),
+    url("./fonts/plutobold.ttf") format("truetype"),
+    url("./fonts/plutobold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "plutolight";
+  src: url("./fonts/plutolight.eot");
+  src: url("./fonts/plutolight.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/plutolight.woff2") format("woff2"),
+    url("./fonts/plutolight.woff") format("woff"),
+    url("./fonts/plutolight.ttf") format("truetype"),
+    url("./fonts/plutolight.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "plutomedium";
+  src: url("./fonts/plutomedium.eot");
+  src: url("./fonts/plutomedium.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/plutomedium.woff2") format("woff2"),
+    url("./fonts/plutomedium.woff") format("woff"),
+    url("./fonts/plutomedium.ttf") format("truetype"),
+    url("./fonts/plutomedium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #36207d;
+}
+
+.ms-3 {
+  margin-left: 20px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+ul li {
+  color: #fff;
+}
+
+/* TERMS AND CONDITIONS PAGE */
+.terms_condition_page {
+  width: 100%;
+  margin:0 0 50px;
+}
+
+.terms_condition_page .custom_header {
+  text-align: center;
+  background-color: #36207d;
+  padding: 20px;
+}
+
+.terms_condition_page .custom_header .logo_center img {
+  max-width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.terms_condition_page .tc_content {
+  margin: 0 30px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #d52880;
+}
+
+.terms_condition_page .tc_content .bigheadtitle {
+  font-size: 22px;
+  font-family: plutomedium;
+  margin: 0 0 20px !important;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.terms_condition_page .tc_content .tc_inner {
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 0 15px;
+}
+
+.terms_condition_page .tc_content .tc_inner .desc:not(:last-child) {
+  margin: 0 0 15px !important;
+}
+
+.terms_condition_page .tc_content .tc_inner .desc {
+  color: #fff;
+  font-size: 14px;
+  font-family: plutolight;
+  line-height: 24px;
+}
+
+.terms_condition_page .tc_content .tc_inner .panel_content {
+  margin: 0 0 20px;
+}
+
+.terms_condition_page .tc_content .tc_inner .panel_content .headtitle {
+  margin: 0 0 10px !important;
+  font-size: 18px;
+  font-family: plutobold;
+  color: #fff;
+}
+
+.terms_condition_page .tc_content .tc_inner .panel_content .txt_short {
+  color: #fff;
+  font-size: 14px;
+  font-family: plutolight;
+  font-weight: 500;
+  line-height: 24px;
+  word-break: break-word;
+  display: block;
+}
+
+.terms_condition_page
+  .tc_content
+  .tc_inner
+  .panel_content
+  .list_disc
+  li:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.terms_condition_page .tc_content .tc_inner .panel_content .list_disc li .dot {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  float: left;
+  margin: 0 10px 0 0;
+  background: #000;
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+  top: 10px;
+}
+
+.terms_condition_page .tc_content .tc_inner .panel_content .txt_bullet {
+  color: #fff;
+  font-size: 14px;
+  font-family: "plutolight";
+  font-weight: 400;
+  line-height: 24px;
+  word-break: break-word;
+}
+.terms_condition_page .tc_content .linkurl {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 700;
+}
+/* ===== Scrollbar CSS ===== */
+/* Scrollbar Styling */
+.terms_condition_page .tc_content .tc_inner::-webkit-scrollbar {
+  width: 10px;
+}
+
+.terms_condition_page .tc_content .tc_inner::-webkit-scrollbar-track {
+  background-color: #ccc;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px #ccc;
+  -webkit-box-shadow: 3px 3px 10px #ccc;
+  -moz-box-shadow: 3px 3px 10px #ccc;
+}
+
+.terms_condition_page .tc_content .tc_inner::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #36207d;
+}
+
+@media (max-width: 991px) {
+  .terms_condition_page .tc_content {
+    height: calc(100vh - 250px);
+    margin: 10px;
+    padding: 10px;
+  }
+  .terms_condition_page .tc_content .tc_inner .panel_content .headtitle {
+    font-size: 18px;
+  }
+}
+/* E > TERMS & CONDITIONS */
